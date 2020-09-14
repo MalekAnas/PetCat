@@ -26,6 +26,20 @@ public class PetCat {
     }
 
 
+    public String getReversedName(char[] name){
+        int a_pointer = 0;
+        int b_pointer = name.length-1;
+
+        while (a_pointer<= b_pointer){
+            char temp = name[a_pointer];
+            name[a_pointer] = name[b_pointer];
+            name[b_pointer] = temp;
+
+            a_pointer +=1;
+            b_pointer -=1;
+        }
+        return String.valueOf(name);
+    }
 
 
 

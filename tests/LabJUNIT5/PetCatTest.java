@@ -50,9 +50,20 @@ class PetCatTest {
     @Test
     public void assertThatGrwo1Year() throws Exception{
 
-        PetCat pudding = new PetCat("Pudding", 4, "Somali");
+         PetCat pudding = new PetCat("Pudding", 4, "Somali");
         PetCat muffin = new PetCat("muffin", 6, "Somali");
 
         assertNotSame(pudding, muffin);
+    }
+
+
+
+    @Test
+    public void checkIfNameIsReversable(){
+        PetCat lol = new PetCat("Lol", 4, "Somali");
+
+        assertTrue(lol.getReversedName(lol.getName().toCharArray()).equalsIgnoreCase(lol.getName()));
+
+
     }
 }
